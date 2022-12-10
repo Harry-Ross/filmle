@@ -1,2 +1,11 @@
-<h1>Hello</h1>
-<router-outlet>
+<nav>
+    <mat-toolbar>
+        <button mat-button routerLink="/" style="font-weight: 700">Filmle</button>
+        <button mat-button routerLink="/history">History</button>
+    </mat-toolbar>
+</nav>
+<main>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</main>
