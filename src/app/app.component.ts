@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Movie } from './models/movie';
 import { MovieService } from './services/movie.service';
 
 @Component({
@@ -7,19 +8,6 @@ import { MovieService } from './services/movie.service';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'filmle';
-    loading: boolean = true;
-    error:any;
 
-    movie:any;
-
-    constructor(private movieService: MovieService) { }
-
-    public getMovie() {
-        this.loading = true;
-        this.error = "";
-
-        this.movieService.getMovie("hello")
-            .subscribe((data) => this.movie = {...data});
-    }
+    constructor() { }
 }
