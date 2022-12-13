@@ -11,12 +11,14 @@ import { HistoryComponent } from './pages/history/history.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HistoryComponent
+    HistoryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -11,11 +11,15 @@ import { Movie } from '../models/movie';
 })
 export class MovieService {
 
-    baseURL: string = "https://localhost:7150/api/";
+    baseURL: string = "https://localhost:7150/api/movie";
 
     constructor(private http: HttpClient) { }
 
     getMovie(apikey: string): Observable<Movie> {
-        return this.http.get<Movie>(this.baseURL + "movie/" + `?auth=${apikey}`);
+        return this.http.get<Movie>(`${this.baseURL}?auth=${apikey}`);
+    }
+
+    getHistory(): Observable<any> {
+        return this.http.get<any>(`${this.baseURL}/history`);
     }
 }
